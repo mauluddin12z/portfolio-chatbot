@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "text": "Muhammad Hidayat Mauluddin is a Full-Stack Web Developer based in Palembang, Indonesia, with expertise in Next.js, Node.js, Express.js, and MySQL. He has experience building scalable web applications and REST APIs.",
+    "keywords": ["fullstack", "web developer", "nextjs", "nodejs", "express", "backend", "frontend", "api"]
+  },
+  {
+    "id": 2,
+    "text": "He completed a Master of Computer Science at Sriwijaya University with a GPA of 3.92 and a Bachelor's in Information Systems with a GPA of 3.66.",
+    "keywords": ["education", "university", "gpa", "master", "bachelor", "computer science"]
+  },
+  {
+    "id": 3,
+    "text": "He has experience building web applications such as a Progressive Web App (PWA) attendance system with location validation and role-based access control, as well as a Point of Sale (POS) system with authentication, product management, transaction handling, and reporting features.",
+    "keywords": ["project", "web app", "pwa", "attendance system", "pos", "crud", "authentication", "backend"]
+  },
+  {
+    "id": 4,
+    "text": "His machine learning experience includes face image restoration using CNN and U-Net, evaluated with PSNR and SSIM, as well as heart attack prediction using Artificial Neural Network (ANN) optimized with Genetic Algorithm (GA) and Particle Swarm Optimization (PSO).",
+    "keywords": ["machine learning", "ml", "cnn", "unet", "ann", "ai", "deep learning", "ga", "pso"]
+  }
+]
