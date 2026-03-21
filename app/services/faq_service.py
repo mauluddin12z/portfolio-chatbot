@@ -23,6 +23,7 @@ class FAQService:
                 best_answer = item["answer"]
 
         # threshold
+        print(best_score)
         if best_score > 70:
             return best_answer
 

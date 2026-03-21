@@ -24,8 +24,6 @@ CONTEXT:
 RULES:
 - Only use information from CONTEXT
 - Do NOT add assumptions or external knowledge
-- If the answer is not in the context, respond with:
-  "Please contact me directly for more information."
 - Keep the answer concise (max 3 sentences)
 - Use a professional and confident tone
 
@@ -36,7 +34,7 @@ ANSWER:
 """
 
     def generate_response(self, question: str, context_chunks: list):
-        # 🔥 Safety: if there is no context
+        # Safety: if there is no context
         if not context_chunks:
             return "Please contact me directly for more information."
 
@@ -53,7 +51,7 @@ ANSWER:
                 }
             )
 
-            # 🔥 handle response
+            # handle response
             if not response or not response.text:
                 return "Please contact me directly for more information."
 

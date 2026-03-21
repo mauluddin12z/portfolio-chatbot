@@ -24,7 +24,7 @@ async def chat(request: Request, body: ChatRequest):
     if not is_allowed(user_id):
         raise HTTPException(status_code=429, detail="Limit reached")
 
-        # FAQ FIRST (IMPORTANT)
+    # FAQ FIRST (IMPORTANT)
     faq_answer = faq_service.find_answer(question)
     if faq_answer:
         return {"source": "faq", "answer": faq_answer}

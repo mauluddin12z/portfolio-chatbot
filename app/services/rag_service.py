@@ -17,7 +17,6 @@ class RAGService:
         self.keywords = [item.get("keywords", []) for item in self.knowledge]
 
         self._build_index()
-        print("Total vectors in index:", self.index.ntotal)
 
     def _build_index(self):
         embeddings = self.model.encode(self.texts)
@@ -28,7 +27,7 @@ class RAGService:
         self.index.add(self.embeddings)
 
 
-    # 🔥 QUERY EXPANSION
+    # QUERY EXPANSION
     def expand_query(self, query: str) -> str:
         q = query.lower()
 
@@ -43,7 +42,7 @@ class RAGService:
 
         return q
 
-    # 🔥 HYBRID SEARCH
+    # HYBRID SEARCH
     def search(self, query: str, k: int = 3):
         expanded_query = self.expand_query(query)
 
@@ -69,7 +68,7 @@ class RAGService:
                 "keyword_score": keyword_score
             })
 
-        # 🔥 Re sorting (HYBRID)
+        # Re sorting (HYBRID)
         results = sorted(
             results,
             key=lambda x: x["keyword_score"],
