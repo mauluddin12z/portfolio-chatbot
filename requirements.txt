@@ -1,8 +1,9 @@
-fastapi
-uvicorn
-pydantic
-sentence-transformers
+fastapi==0.135.1
+uvicorn[standard]
+numpy==2.4.3
+pydantic==2.12.5
+python-dotenv==1.2.2
+sentence-transformers==5.3.0
 faiss-cpu
-numpy
-python-dotenv
 google-generativeai
+rapidfuzz==3.14.3
