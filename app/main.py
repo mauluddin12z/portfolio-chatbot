@@ -3,18 +3,19 @@ import json
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.chat import router as chat_router
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
 
 app = FastAPI(title="Portfolio Chatbot API")
 
-# CORS configuration
-origins = [
-    "http://localhost:3000",
-    "http://192.168.0.105:3000",
-]
+allowed_origins = os.getenv("ALLOWED_ORIGINS", "").split(",")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

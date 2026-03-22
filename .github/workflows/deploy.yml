@@ -20,7 +20,7 @@ jobs:
           script: |
             bash -lc '
               # Navigate to the app folder
-              cd /home/portfolio-chatbot
+              cd portfolio-chatbot
 
               # Sync repo
               git fetch origin
@@ -35,7 +35,8 @@ jobs:
               pip install --upgrade pip
               pip install -r requirements.txt
 
-              # Restart the app with PM2
-              pm2 reload portfolio-chatbot || pm2 start ecosystem.config.js
-              pm2 save
+              # Restart the app using systemd (assuming service named portfolio-chatbot.service)
+              sudo systemctl daemon-reload
+              sudo systemctl restart portfolio-chatbot.service
+              sudo systemctl status portfolio-chatbot.service
             '
